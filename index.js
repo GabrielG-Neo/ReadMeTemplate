@@ -1,45 +1,30 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-let createTemplate = `# ReadMeTemplate
+// function to write README file
+let writeToFile = (name, message) => {
+  return `# ReadMeTemplate
+  Description${message};
+  Table of Contents${message}
+      Installation
+      Usage
+      License
+      Contributions
+      Tests
+      Questions
+  Installation${message}
+  Usage${message}
+  License${message}
+  Contributing${message}
+  Tests${message}
+  Questions${message}`;
+}
 
-
-Description
-
-
-Table of Contents
-    Installation
-    Usage
-    License
-    Contributions
-    Tests
-    Questions
-
-
-Installation
-
-
-Usage
-
-
-License
-
-
-Contributing
-
-
-Tests
-
-
-Questions`;
+const {name, message} = answers;
 
 console.log(createTemplate);
 
 
-fs.writeFile('README.md', createTemplate, (err) => {
-    if (err) throw err;
-    
-});
 
 // array of questions for user
 const questions = [ {
@@ -89,15 +74,18 @@ inquirer
   .prompt(questions)
   .then(answers => {
    console.log(answers)
+
+    const createTemplate = writeToFile(name, message);
+    fs.writeFile('README.md', createTemplate, (err) => {
+      if (err) throw err;
+    });
   })
   .catch(error => {
     console.log(error)
   });
 
 
-// function to write README file
-function writeToFile(fileName, data) {
-}
+
 
 // function to initialize program
 function init() {

@@ -1,6 +1,4 @@
 # ReadMeTemplate
-
-
 Description
 Table of Contents
     Installation

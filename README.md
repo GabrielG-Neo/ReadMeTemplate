@@ -2,8 +2,6 @@
 
 
 Description
-
-
 Table of Contents
     Installation
     Usage
@@ -11,21 +9,9 @@ Table of Contents
     Contributions
     Tests
     Questions
-
-
 Installation
-
-
 Usage
-
-
 License
-
-
 Contributing
-
-
 Tests
-
-
 Questions

@@ -1,15 +1,17 @@
 # ReadMeTemplate
-Description
-Table of Contents
-    Installation
-    Usage
-    License
-    Contributions
-    Tests
-    Questions
-Installation
-Usage
-License
-Contributing
-Tests
-Questions
+  Description:
+  undefined;
+  Table of Contents:
+  undefined
+  Installation:
+  undefined
+  Usage:
+  undefined
+  License:
+  undefined
+  Contributing:
+  undefined
+  Tests:
+  undefined
+  Questions:
+  undefined

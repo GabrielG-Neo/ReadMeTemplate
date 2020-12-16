@@ -4,29 +4,26 @@ const fs = require('fs');
 // function to write README file
 let writeToFile = (name, message) => {
   return `# ReadMeTemplate
-  Description${message};
-  Table of Contents${message}
-      Installation
-      Usage
-      License
-      Contributions
-      Tests
-      Questions
-  Installation${message}
-  Usage${message}
-  License${message}
-  Contributing${message}
-  Tests${message}
-  Questions${message}`;
+    Description:
+    ${message};
+    Table of Contents:
+    ${message}
+    Installation:
+    ${message}
+    Usage:
+    ${message}
+    License:
+    ${message}
+    Contributing:
+    ${message}
+    Tests:
+    ${message}
+    Questions:
+    ${message}`;
 }
+console.log(writeToFile);
 
-const {name, message} = answers;
-
-console.log(createTemplate);
-
-
-
-// array of questions for user
+//array of questions for user
 const questions = [ {
     type: 'input',
     name: 'Description',
@@ -73,9 +70,11 @@ const questions = [ {
 inquirer
   .prompt(questions)
   .then(answers => {
-   console.log(answers)
+  console.log(answers)
 
-    const createTemplate = writeToFile(name, message);
+  const {name, message} = answers;
+
+  const createTemplate = writeToFile(name, message);
     fs.writeFile('README.md', createTemplate, (err) => {
       if (err) throw err;
     });
